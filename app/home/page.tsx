@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { FaGithub, FaLinkedin, FaEnvelope, FaBriefcase, FaGraduationCap, FaAward} from 'react-icons/fa';
 import { SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiNodedotjs, SiExpress, SiTailwindcss, SiPython } from 'react-icons/si';
+import TextType from "@/components/TextType";
 
 export default function Home() {
   return (
@@ -18,10 +19,18 @@ export default function Home() {
           transition={{ duration: 0.5 }}
         >
           <div>
-            <h2 className="text-sm font-mono text-blue-300 mb-4 tracking-wider uppercase">Web Developer</h2>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6 text-white">
-              Andrei Benedict Calo
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-2 text-white">
+              Hi! I am <br></br>
             </h1>
+            <TextType 
+              text={["Andrei Benedict Calo", "a Full-Stack Developer", "a Creative Problem-Solver"]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              deletingSpeed={40}
+              showCursor={true}
+              cursorCharacter="|"
+              className="text-4xl md:text-6xl font-bold tracking-tighter text-blue-400"
+            />
           </div>
 
           {/* Tech Stack */}

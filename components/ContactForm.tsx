@@ -40,7 +40,7 @@ export default function ContactForm() {
             id="name"
             name="name"
             type="text"
-            placeholder="Juan Dela Cruz"
+            placeholder="Your name"
             required
             className="w-full bg-blue-900/20 backdrop-blur border border-blue-500/20 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-300 transition-colors text-white placeholder:text-slate-500"
           />
@@ -52,7 +52,7 @@ export default function ContactForm() {
             id="email"
             name="email"
             type="email"
-            placeholder="jdc@example.com"
+            placeholder="Your email"
             required
             className="w-full bg-blue-900/20 backdrop-blur border border-blue-500/20 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-300 transition-colors text-white placeholder:text-slate-500"
           />

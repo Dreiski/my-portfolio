@@ -3,7 +3,6 @@ import { Space_Grotesk, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/NavBar";
 
-
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
@@ -15,7 +14,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Dreiski",
+  title: "Andrei Benedict Calo - Portfolio",
   description: "My personal portfolio showing projects and skills.",
 };
 
@@ -30,8 +29,10 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${spaceGrotesk.variable} ${outfit.variable} antialiased`}
       >
+        <div className="relative z-10">
           <Navbar />
-        {children}
+          {children}
+        </div>
       </body>
     </html>
   );
