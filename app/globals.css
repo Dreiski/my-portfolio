@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000000;
-  --foreground: #ffff;
+  --background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 25%, #1a3a52 50%, #0f2744 100%);
+  --foreground: #f0f4f8;
 }
 
 @theme inline {
@@ -14,15 +14,47 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
-    --foreground: #ededed;
+    --background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 25%, #1a3a52 50%, #0f2744 100%);
+    --foreground: #f0f4f8;
   }
 }
 
-body {
+html {
   background: var(--background);
+  background-attachment: fixed;
+}
+
+body {
+  background: transparent;
   min-height: 100vh;
   color: var(--foreground);
   font-family: Syne, Arial, Helvetica, sans-serif;
-  padding: 2vh;
+  padding: 0;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(34, 197, 234, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Glassmorphism effect for cards */
+.glass-effect {
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(12px) brightness(1.1);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.37),
+              inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
 }

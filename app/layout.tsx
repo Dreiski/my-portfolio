@@ -27,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+        suppressHydrationWarning
         className={`${spaceGrotesk.variable} ${outfit.variable} antialiased`}
       >
           <Navbar />
